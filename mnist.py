@@ -20,6 +20,8 @@ input_shape = (28, 28, 1)
 batch_size = 128
 num_classes = 10
 epochs = 10
+#if we do not use cnn then, x_train = x_train.reshape(600000, image_height*image*width) to convert this to array
+#then simply use model.add(Dense(512, activation='', input_shape=image_height*image_width)
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=input_shape))
 model.add(Conv2D(64, (3, 3), activation='relu'))
